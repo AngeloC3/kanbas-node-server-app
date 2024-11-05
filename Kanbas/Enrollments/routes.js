@@ -15,8 +15,8 @@ export default function EnrollmentRoutes(app) {
   };
 
   const unenrollUserInCourse = (req, res) => { 
-    const { enrollmentId } = req.params;
-    dao.unenrollUserInCourse(enrollmentId)
+    const { courseId, userId } = req.params;
+    dao.unenrollUserInCourse(courseId, userId)
     res.sendStatus(200);
   };
 
@@ -27,5 +27,5 @@ export default function EnrollmentRoutes(app) {
   });
 
   app.post("/api/enrollments/enroll/:courseId/", enrollUserInCourse);
-  app.post("/api/enrollments/unenroll/:enrollmentId", unenrollUserInCourse);
+  app.post("/api/enrollments/unenroll/:courseId/:userId", unenrollUserInCourse);
 }
