@@ -42,4 +42,7 @@ ModuleRoutes(app);
 AssignmentRoutes(app);
 EnrollmentRoutes(app);
 
-app.listen(process.env.PORT || 4000)
+const port = process.env.PORT || 4000
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`)
+})
