@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/AngeloC3/kanbas-node-server-app.git"
   },
-  "engines": {
-    "node": ">=16.0.0 <17.0.0"
-  },
   "keywords": [
     "Node",
     "REST",
