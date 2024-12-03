@@ -23,7 +23,6 @@ app.use(
       origin: corsOrigin,
     })
    );
-   app.use(express.json());
 
 const sessionOptions = {
     secret: process.env.SESSION_SECRET || "kanbas",
@@ -39,6 +38,8 @@ if (process.env.NODE_ENV !== "development") {
     };
 }
 app.use(session(sessionOptions));  
+
+app.use(express.json());
 
 Lab5(app);
 Hello(app);
